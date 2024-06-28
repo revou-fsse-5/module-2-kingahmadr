@@ -1,0 +1,363 @@
+@font-face {
+    font-family: Jakarta-Sans;
+    src: url(fonts/PlusJakartaSans-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: Jakarta-Sans;
+    src: url(fonts/PlusJakartaSans-Bold.ttf);
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: Jakarta-Sans, "Open Sans", sans-serif;
+    margin: 0;
+  }
+  
+  .mode-hitam {
+    background-color: #333333;
+    color: white;
+  }
+  
+  .mode-hitam > nav {
+    background-color: #333333;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+  
+  .mode-hitam > nav a {
+    color: white;
+  }
+  
+  section {
+    margin: 0 16px;
+  }
+  
+  section.full-screen {
+    margin: 0;
+  }
+  
+  nav {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    border-bottom: 2px solid #222222;
+    z-index: 99999;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 22px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  nav a {
+    color: #222222;
+    text-decoration: none;
+  }
+  
+  nav > #mode-hitam-switch {
+    display: flex;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+  
+  nav > #mode-hitam-switch > p {
+    margin-right: 8px;
+  }
+  
+  nav > ul > li {
+    display: inline-block;
+  }
+  
+  nav > span > img {
+    height: 32px;
+    width: auto;
+    padding: 8px;
+  }
+  
+  nav > span {
+    display: flex;
+    align-items: center;
+  }
+  
+  header {
+    text-align: center;
+    color: white;
+    background-color: #222222;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 48px;
+    background-image: url("img/bg_image_bokuno.png");
+    background-position: top center;
+    background-size: cover;
+  }
+  
+  nav .circle-red {
+    font-size: 8px;
+    background-color: red;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    right: -8px;
+  }
+  
+  @keyframes slidein {
+    
+    from {
+      margin-left: 100%;
+      width: 300%;
+      font-size: 50px;
+    }
+    
+    50%{
+      color: blue;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+      color: white;
+    }
+  }
+  
+  .relative-container {
+    position: relative;
+  }
+  
+  header h1 {
+    font-weight: bold;
+    margin: 16px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    text-shadow: 2px 2px #222222;
+    color: red;
+  }
+  
+  header p {
+    margin: 0;
+    text-shadow: 2px 2px #222222;
+    color: yellow;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  h2 {
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  #section-video .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #anime-facts .flex-container figure {
+    text-align: center;
+  }
+  
+  #anime-photos .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+    grid-auto-rows: 240px 240px 240px;
+  }
+  
+  #anime-photos .grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .grid-container #item-1 {
+    grid-column: 1 / 2 span;
+    grid-row: 1;
+  }
+  
+  fieldset {
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 4px 4px;
+    margin: 8px 0;
+    display: block;
+  }
+  
+  input[type="date"] {
+    margin: 8px 0;
+    display: block;
+  }
+  
+  #form-section {
+    background-color: #333333;
+    color: white;
+    padding: 8px;
+    margin-top: 16px;
+  }
+  
+  #form-section form {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  button[type="submit"] {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .anime-photo-item {
+    filter: grayscale(100%);
+    cursor: pointer;
+  }
+  
+  .anime-photo-item:hover {
+    filter: none;
+    transition-property: filter;
+    transition-duration: 1s;
+  }
+  
+  /* for tablet and desktop */
+  @media only screen and (min-width: 768px) {
+    #anime-facts > .flex-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    #anime-facts > .flex-container figure {
+      margin-left: auto;
+    }
+  
+    #anime-facts > .flex-container figure img {
+      height: 400px;
+    }
+  
+    #anime-facts > .flex-container figcaption {
+      text-align: center;
+      margin-top: 16px;
+    }
+  
+    #anime-facts > .flex-container.row-reverse {
+      flex-direction: row-reverse;
+    }
+  
+    #anime-facts > .flex-container.row-reverse p {
+      margin-left: 32px;
+    }
+  
+    #anime-facts > .flex-container.row-reverse figure {
+      margin-left: 40px;
+      min-width: 320px;
+    }
+  
+    iframe {
+      max-width: 480px;
+    }
+  
+    #anime-photos .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 16px;
+      grid-auto-rows: 320px 320px;
+    }
+  
+    #anime-photos .grid-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .grid-container #item-1 {
+      grid-column: 1;
+      grid-row: 1 / 2 span;
+    }
+  
+    .grid-container #item-2 {
+      grid-row: 1;
+      grid-column: 2 / 3 span;
+    }
+  }
+  

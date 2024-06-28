@@ -1,0 +1,22 @@
+.mobile {
+    display: none;
+  }
+  
+  .desktop {
+    display: block;
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    .mobile {
+      display: block;
+    }
+    /* nav .menu-nav {
+        clear: none;
+        float: right;
+        max-height: none;
+      } */
+  
+    .desktop {
+      display: none;
+    }
+  }

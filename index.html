@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A web application to show photos of penguins"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Ahmad Naufal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boku no Hero Academia</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/responsive.css" />
+    <!-- <link rel="stylesheet" href="assets/hamburger.css" /> -->
+    <link
+      rel="icon"
+      href="https://user-images.githubusercontent.com/2970318/209440270-8940c110-dcd2-45ba-aeef-d316cb241b00.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav>
+      <span class="mobile">
+        <img
+          src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg"
+          alt="Hamburger Icon"
+        />
+
+      </span>
+      <ul class="menu-nav">
+        <a href="#menu">Home</a>
+        <a href="#contact">Contact</a>
+      </ul>
+      <span class="relative-container">
+        <img
+          src="https://user-images.githubusercontent.com/2970318/209562035-bdbfb418-b564-4676-91bc-286fa03ca4d8.png"
+          alt="Penguin Fan Club Icon"
+        />
+
+        <b>Boku no Hero Anime</b>
+      </span>
+
+      <span id="mode-hitam-switch">
+        <p>Mode Hitam</p>
+
+        <label class="switch">
+          <input
+            id="checkbox-mode-hitam"
+            onchange="toggleDarkMode()"
+            type="checkbox"
+          />
+          <span class="slider round"></span>
+        </label>
+      </span>
+    </nav>
+    <header class="full-screen" id="header">
+      <h1>Boku no Hero Anime</h1>
+      <p>Sarani Mokue, Plus Ultra !!</p>
+    </header>
+    <main>
+      <section id="anime-photos">
+        <h2>Anime Photos</h2>
+        <div class="grid-container">
+          <div class="anime-photo-item" id="item-1">
+            <img
+              src="img/bokuno-hero1.jpg"
+              alt="Deku On Fire"
+            />
+          </div>
+          <div class="anime-photo-item" id="item-2">
+            <img
+              src="img/bokuno-hero2.jpg"
+              alt="Boku no Hero Gangs"
+            />
+          </div>
+          <div class="anime-photo-item" id="item-3">
+            <img
+              src="img/bokuno-hero3.jpg"
+              alt="Deku Fight"
+            />
+          </div>
+          <div class="anime-photo-item" id="item-4">
+            <img
+              src="img/bokuno-hero4.jpg"
+              alt="Deku and Shoto"
+            />
+          </div>
+          <div class="anime-photo-item" id="item-5">
+            <img
+              src="img/bokuno-hero5.jpg"
+              alt="Deku one for All"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="anime-facts">
+        <h2>Fun facts about the Anime</h2>
+        <div class="flex-container">
+          <ul>
+            <li>Ranked #850 On myanimelist.net</li><br>
+            <li>Reached #7 On the most popular Anime</li><br>
+            <li>The anime score rating is 7.861 (scored by 2,080,324 users)</li>
+          </ul>
+          <figure>
+            <picture>
+              <source
+                media="(max-width: 500px)"
+                srcset="img/bokuno-hero6.jpg"
+              />
+              <img
+                src="img/bokuno-hero6.jpg"
+                alt="Boku no Hero cover"
+              />
+            </picture>
+
+            <figcaption>Cover <em>Boku no Heor</em></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="section-video">
+        <h2>Boku No Hero Season 7 Trailer</h2>
+        <div class="flex-container">
+          <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/UvEGL9KDGNQ?si=vjfwR3XZ4qw0NOQ2" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <section id="form-section">
+        <h2>Join The Fan Club</h2>
+        <form action="#">
+          <fieldset>
+            <legend>Personal Data:</legend>
+            <div>
+              <label for="fullName">Full Name:</label>
+              <input id="fullName" type="text" required />
+            </div>
+
+            <div>
+              <label for="email">Email:</label>
+              <input id="email" type="email" required />
+            </div>
+
+            <div>
+              <label for="dob">Date of Birth</label>
+              <input
+                type="date"
+                id="dob"
+                name="trip-start"
+                value="2018-07-22"
+              />
+            </div>
+
+            <div>
+              <p>Are you living in Indonesia?</p>
+              <input type="radio" id="yes" name="isIndonesia" value="Male" />
+              <label for="yes">Yes</label>
+              <input type="radio" id="no" name="isIndonesia" value="Female" />
+              <label for="no">No</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Additional information:</legend>
+            <div>
+              <p>What do you think about the anime?</p>
+              <input
+                id="spiritfull"
+                type="checkbox"
+                name="personality"
+                value="spiritfull"
+              />
+              <label for="spiritfull">Spiritfull</label>
+              <input
+                id="amazing"
+                type="checkbox"
+                name="personality"
+                value="amazing"
+              />
+              <label for="amazing">Amazing</label>
+              <input
+                id="Sugoi"
+                type="checkbox"
+                name="personality"
+                value="Sugoi"
+              />
+              <label for="Sugoi">Sugoi</label>
+            </div>
+            <div>
+              <p>Tell us why you love The Anime!</p>
+              <textarea rows="3"></textarea>
+            </div>
+            <div>
+              <p>Upload your favorite Anime picture here:</p>
+              <input
+                type="file"
+                id="photo"
+                name="myAnimePhoto"
+                required
+                accept="image/png, image/jpeg, image/jpg"
+              />
+            </div>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      // initial state
+      if (localStorage.getItem("darkMode") === "true") {
+        document.getElementById("checkbox-mode-hitam").checked = true;
+        document.body.classList.add("mode-hitam");
+      }
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("mode-hitam");
+        if (!document.getElementById("checkbox-mode-hitam").checked) {
+          localStorage.setItem("darkMode", false);
+        } else {
+          localStorage.setItem("darkMode", true);
+        }
+      }
+    </script>
+  </body>
+</html>
