@@ -28,6 +28,10 @@
   .mode-hitam > nav a {
     color: white;
   }
+
+  .mode-hitam .sidebar a:hover{
+    background-color: black;
+  }
   
   section {
     margin: 0 16px;

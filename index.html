@@ -13,7 +13,7 @@
     <title>Boku no Hero Academia</title>
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="assets/responsive.css" />
-    <!-- <link rel="stylesheet" href="assets/hamburger.css" /> -->
+    <link rel="stylesheet" href="assets/hamburger.css" />
     <link
       rel="icon"
       href="https://user-images.githubusercontent.com/2970318/209440270-8940c110-dcd2-45ba-aeef-d316cb241b00.png"
@@ -22,17 +22,13 @@
   </head>
   <body>
     <nav>
-      <span class="mobile">
-        <img
+      <span onclick=showSidebar() class="mobile">
+        <img 
           src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg"
           alt="Hamburger Icon"
         />
 
       </span>
-      <ul class="menu-nav">
-        <a href="#menu">Home</a>
-        <a href="#contact">Contact</a>
-      </ul>
       <span class="relative-container">
         <img
           src="https://user-images.githubusercontent.com/2970318/209562035-bdbfb418-b564-4676-91bc-286fa03ca4d8.png"
@@ -41,6 +37,15 @@
 
         <b>Boku no Hero Anime</b>
       </span>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a class="noHover" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#menu">Home</a></li>
+        <li><a href="#contact">Join Club</a></li>
+      </ul>
+      <ul class="menu-nav">
+        <li class="hideOnMobile"><a href="#menu">Home</a></li>
+        <li class="hideOnMobile"><a href="#contact">Join Club</a></li>
+      </ul>
 
       <span id="mode-hitam-switch">
         <p>Mode Hitam</p>
@@ -230,6 +235,17 @@
           localStorage.setItem("darkMode", true);
         }
       }
+
+      //Hamburger button
+      function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+
+        }
     </script>
   </body>
 </html>

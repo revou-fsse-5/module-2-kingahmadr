@@ -1,18 +1,71 @@
-header .menu-icon .navicon:before,
-header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
+
+.sidebar ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidebar li{
+  height: 50px;
   width: 100%;
 }
 
-header .menu-icon .navicon:before {
-  top: 5px;
+.sidebar a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+
 }
 
-header .menu-icon .navicon:after {
-  top: -5px;
+.sidebar a:hover{
+  background-color: white;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* height: 100vh; */
+  height: 100%;
+  width: 250px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 255, 0.215);
+  box-shadow: -10px 0 10px rgb(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.noHover{
+  background-color: unset !important;
+  color: unset !important;
+
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+      display: none;
+  }
+}
+
+@media(max-width: 500px){
+  .sidebar{
+      width: 100%;
+  }
 }
