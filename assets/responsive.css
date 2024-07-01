@@ -2,9 +2,10 @@
     display: none;
   }
   
-  .desktop {
-    display: block;
-  }
+.desktop {
+  display: block;
+}
+
   
   @media only screen and (max-width: 800px) {
     .mobile {
@@ -20,3 +21,14 @@
       display: none;
     }
   }
+
+  @media only screen and (max-width: 700px) {
+
+    .mode-gradient > nav {
+      font-size: x-small;
+    }
+    #audio-desktop-size{
+      display: none;
+    }
+ 
+ }

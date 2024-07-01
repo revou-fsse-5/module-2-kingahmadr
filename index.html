@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="A web application to show photos of penguins"
+      content="Boku no Hero Anime Site"
     />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Ahmad Naufal" />
@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="assets/responsive.css" />
     <link rel="stylesheet" href="assets/hamburger.css" />
+    <link rel="stylesheet" href="assets/audio.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap" />
     <link
       rel="icon"
-      href="https://user-images.githubusercontent.com/2970318/209440270-8940c110-dcd2-45ba-aeef-d316cb241b00.png"
+      href="assets/img/boku_no_icon-removebg-preview.jpg"
       type="image/x-icon"
     />
   </head>
@@ -31,35 +33,47 @@
       </span>
       <span class="relative-container">
         <img
-          src="https://user-images.githubusercontent.com/2970318/209562035-bdbfb418-b564-4676-91bc-286fa03ca4d8.png"
-          alt="Penguin Fan Club Icon"
+          src="assets/img/boku_no_icon.jpg"
+          alt="Deku Icon"
         />
 
         <b>Boku no Hero Anime</b>
       </span>
       <ul class="sidebar">
-        <li onclick=hideSidebar()><a class="noHover" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li><a href="#menu">Home</a></li>
-        <li><a href="#contact">Join Club</a></li>
+        <li onclick=hideSidebar()><a class="noHover"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li onclick=hideSidebar()><a class="Hover" href="#">Home</a></li>
+        <li onclick=hideSidebar()><a class="Hover" href="#form-section">Join Club</a></li>
       </ul>
       <ul class="menu-nav">
-        <li class="hideOnMobile"><a href="#menu">Home</a></li>
-        <li class="hideOnMobile"><a href="#contact">Join Club</a></li>
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#form-section">Join Club</a></li>
       </ul>
-
-      <span id="mode-hitam-switch">
-        <p>Mode Hitam</p>
+      <ul id="audio-desktop-size">
+        <li><audio id="player" src="assets/audio/boku-no-ost.mp3" loop></audio></li>
+        <li><button id="play">Play</button></li>
+        <li><input type="range" min="0" max="1" step="0.01" id="volume-slider" /></li>
+        <!-- <li><p id="volume-display">Volume: 50%</p></li> -->
+      </ul>
+      <span id="mode-gradient-switch">
+        <p>Mode Gradient</p>
 
         <label class="switch">
           <input
-            id="checkbox-mode-hitam"
-            onchange="toggleDarkMode()"
+            id="checkbox-mode-gradient"
+            onchange="toggleGradientMode()"
             type="checkbox"
           />
           <span class="slider round"></span>
         </label>
       </span>
     </nav>
+    <section id="audio-player-container">
+      <audio id="player-flex" src="assets/audio/boku-no-ost.mp3" loop></audio>
+      <input type="range" min="0" max="1" step="0.01" id="volume-slider-flex" />
+      <p id="volume-display-flex">Volume: 50%</p>
+      <button id="play-flex">Play</button>
+    </section>
+
     <header class="full-screen" id="header">
       <h1>Boku no Hero Anime</h1>
       <p>Sarani Mokue, Plus Ultra !!</p>
@@ -222,17 +236,17 @@
 
     <script>
       // initial state
-      if (localStorage.getItem("darkMode") === "true") {
-        document.getElementById("checkbox-mode-hitam").checked = true;
-        document.body.classList.add("mode-hitam");
+      if (localStorage.getItem("gradientMode") === "true") {
+        document.getElementById("checkbox-mode-gradient").checked = true;
+        document.body.classList.add("mode-gradient");
       }
 
-      function toggleDarkMode() {
-        document.body.classList.toggle("mode-hitam");
-        if (!document.getElementById("checkbox-mode-hitam").checked) {
-          localStorage.setItem("darkMode", false);
+      function toggleGradientMode() {
+        document.body.classList.toggle("mode-gradient");
+        if (!document.getElementById("checkbox-mode-gradient").checked) {
+          localStorage.setItem("gradientMode", false);
         } else {
-          localStorage.setItem("darkMode", true);
+          localStorage.setItem("gradientMode", true);
         }
       }
 
@@ -241,11 +255,13 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
         }
-        function hideSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-
-        }
+      function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+      }
     </script>
+    <script src="assets/audio.js"></script>
+    <script src="assets/audio-flex.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,109 @@
+/* Overall container */
+#audio-player-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999999;
+  }
+  @media only screen and (max-width: 700px) {
+    #audio-player-container{
+        display: flex;
+    }
+
+  }
+
+  /* Audio player */
+  #player {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #player-flex {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Volume slider */
+  #volume-slider {
+    width: 150px;
+    -webkit-appearance: none; /* Remove default styling */
+    height: 5px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    margin: 20px;
+  }
+
+  #volume-slider-flex {
+    width: 150px;
+    -webkit-appearance: none; /* Remove default styling */
+    height: 5px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  #volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  #volume-slider-flex::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Volume display */
+  #volume-display {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+  }
+
+  #volume-display-flex {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  /* Play button */
+  #play {
+    background-color: #4CAF50; /* Match the slider thumb */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #play-flex {
+    background-color: #4CAF50; /* Match the slider thumb */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #play:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+
+  #play-flex:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
