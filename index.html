@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/hamburger.css" />
     <link rel="stylesheet" href="assets/audio.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Viga&display=swap" rel="stylesheet">
     <link
       rel="icon"
       href="assets/img/boku_no_icon-removebg-preview.jpg"
@@ -52,7 +53,6 @@
         <li><audio id="player" src="assets/audio/boku-no-ost.mp3" loop></audio></li>
         <li><button id="play">Play</button></li>
         <li><input type="range" min="0" max="1" step="0.01" id="volume-slider" /></li>
-        <!-- <li><p id="volume-display">Volume: 50%</p></li> -->
       </ul>
       <span id="mode-gradient-switch">
         <p>Mode Gradient</p>
@@ -83,34 +83,69 @@
         <h2>Anime Photos</h2>
         <div class="grid-container">
           <div class="anime-photo-item" id="item-1">
-            <img
-              src="img/bokuno-hero1.jpg"
+            <picture>
+              <source
+              media="(max-width: 769px)"
+              srcset="img/bokuno-hero1.jpg"
               alt="Deku On Fire"
             />
+              <img
+              src="img/hero1-wide.png"
+              alt="Deku Gang On Fire"
+            />
+            </picture>
           </div>
           <div class="anime-photo-item" id="item-2">
-            <img
-              src="img/bokuno-hero2.jpg"
-              alt="Boku no Hero Gangs"
+            <picture>
+              <source
+              media="(max-width: 769px)"
+              srcset="img/bokuno-hero2.jpg"
+              alt="Boku no Hero Gang"
             />
+              <img
+              src="img/hero2-wide.jpg"
+              alt="Deku, Bakugo and Shoto Facing the Gloom"
+            />
+            </picture>
           </div>
           <div class="anime-photo-item" id="item-3">
-            <img
-              src="img/bokuno-hero3.jpg"
-              alt="Deku Fight"
+            <picture>
+              <source
+              media="(max-width: 769px)"
+              srcset="img/bokuno-hero3.jpg"
+              alt="Furious Deku"
             />
+              <img
+              src="img/hero3-wide.jpg"
+              alt="Calm Deku"
+            />
+            </picture>
           </div>
           <div class="anime-photo-item" id="item-4">
-            <img
-              src="img/bokuno-hero4.jpg"
-              alt="Deku and Shoto"
+            <picture>
+              <source
+              media="(max-width: 769px)"
+              srcset="img/bokuno-hero4.jpg"
+              alt="Shoto and Deku"
             />
+              <img
+              src="img/hero4-wide.jpg"
+              alt="Bakugo clashing Deku"
+            />
+            </picture>      
           </div>
           <div class="anime-photo-item" id="item-5">
-            <img
-              src="img/bokuno-hero5.jpg"
-              alt="Deku one for All"
+            <picture>
+              <source
+              media="(max-width: 769px)"
+              srcset="img/bokuno-hero5.jpg"
+              alt="Deku Black Tail"
             />
+              <img
+              src="img/hero5-wide.jpg"
+              alt="Boku no Hero Gang"
+            />
+            </picture> 
           </div>
         </div>
       </section>
@@ -129,29 +164,34 @@
                 media="(max-width: 500px)"
                 srcset="img/bokuno-hero6.jpg"
               />
-              <img
+              <img class="cover"
                 src="img/bokuno-hero6.jpg"
                 alt="Boku no Hero cover"
               />
             </picture>
 
-            <figcaption>Cover <em>Boku no Heor</em></figcaption>
+            <figcaption>Cover <em>Boku no Hero</em></figcaption>
           </figure>
         </div>
       </section>
       <section id="section-video">
-        <h2>Boku No Hero Season 7 Trailer</h2>
-        <div class="flex-container">
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/UvEGL9KDGNQ?si=vjfwR3XZ4qw0NOQ2" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
+        <h2>Boku No Hero Season 7 Carousel</h2>    
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item">
+              <iframe src="https://www.youtube.com/embed/UvEGL9KDGNQ?si=yqqeF8McoQMtdp3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Boku no Hero S7 Official Trailer"></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe src="https://www.youtube.com/embed/3sChU1j4D34?si=282wGxHcKhbjSebt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Shoto vs Dabi"></iframe>
+            </div>
+            <div class="carousel-item">
+              <iframe src="https://www.youtube.com/embed/DA_7_XiFcLY?si=jmByYJolfSpE9xUK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Endevour and Hawk"></iframe>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+          </div>
         </div>
       </section>
 
@@ -262,6 +302,8 @@
     </script>
     <script src="assets/audio.js"></script>
     <script src="assets/audio-flex.js"></script>
+    <script src="assets/carousel.js"></script>
+
 
   </body>
 </html>

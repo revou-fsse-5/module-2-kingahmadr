@@ -1,147 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="A web application to show photos of penguins" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Ahmad Naufal" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boku no Hero Academia</title>
-    <link rel="stylesheet" href="../assets/style.css" />
-    <link rel="stylesheet" href="../assets/responsive.css" />
-    <link rel="stylesheet" href="../assets/hamburger.css" />
-    <link rel="icon" href="https://user-images.githubusercontent.com/2970318/209440270-8940c110-dcd2-45ba-aeef-d316cb241b00.png" type="image/x-icon" />
-  </head>
-  <body>
-    <header>
-      <div class="header-container">
-        <div class="logo">
-          <img src="https://user-images.githubusercontent.com/2970318/209562035-bdbfb418-b564-4676-91bc-286fa03ca4d8.png" alt="Penguin Fan Club Icon" />
-          <h1>Boku no Hero Academia</h1>
-        </div>
-        <div class="mode-toggle">
-          <label class="switch">
-            <input id="checkbox-mode-hitam" onchange="toggleDarkMode()" type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-          <p>Mode Hitam</p>
-        </div>
-        <div class="hamburger" onclick="showSidebar()">
-          <img src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg" alt="Hamburger Icon" />
-        </div>
-      </div>
-    </header>
-    <nav class="sidebar">
-      <ul>
-        <li onclick="hideSidebar()"><a class="noHover" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-        <li><a href="#menu">Home</a></li>
-        <li><a href="#contact">Join Club</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="header" class="hero-section">
-        <div class="hero-content">
-          <h2>Boku no Hero Anime</h2>
-          <p>Sarani Mokue, Plus Ultra !!</p>
-        </div>
-      </section>
-      <section id="anime-photos">
-        <h2>Anime Photos</h2>
-        <div class="photo-gallery">
-          <div class="photo-item"><img src="../img/bokuno-hero1.jpg" alt="Deku On Fire" /></div>
-          <div class="photo-item"><img src="../img/bokuno-hero2.jpg" alt="Boku no Hero Gangs" /></div>
-          <div class="photo-item"><img src="../img/bokuno-hero3.jpg" alt="Deku Fight" /></div>
-          <div class="photo-item"><img src="../img/bokuno-hero4.jpg" alt="Deku and Shoto" /></div>
-          <div class="photo-item"><img src="../img/bokuno-hero5.jpg" alt="Deku one for All" /></div>
-        </div>
-      </section>
-      <section id="anime-facts">
-        <h2>Fun Facts about the Anime</h2>
-        <div class="facts-container">
-          <ul>
-            <li>Ranked #850 On myanimelist.net</li>
-            <li>Reached #7 On the most popular Anime</li>
-            <li>The anime score rating is 7.861 (scored by 2,080,324 users)</li>
-          </ul>
-          <figure>
-            <img src="img/bokuno-hero6.jpg" alt="Boku no Hero cover" />
-            <figcaption>Cover <em>Boku no Hero</em></figcaption>
-          </figure>
-        </div>
-      </section>
-      <section id="section-video">
-        <h2>Boku No Hero Season 7 Trailer</h2>
-        <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/UvEGL9KDGNQ?si=vjfwR3XZ4qw0NOQ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </section>
-      <section id="form-section">
-        <h2>Join The Fan Club</h2>
-        <form action="#">
-          <fieldset>
-            <legend>Personal Data:</legend>
-            <div>
-              <label for="fullName">Full Name:</label>
-              <input id="fullName" type="text" required />
-            </div>
-            <div>
-              <label for="email">Email:</label>
-              <input id="email" type="email" required />
-            </div>
-            <div>
-              <label for="dob">Date of Birth</label>
-              <input type="date" id="dob" name="trip-start" value="2018-07-22" />
-            </div>
-            <div>
-              <p>Are you living in Indonesia?</p>
-              <input type="radio" id="yes" name="isIndonesia" value="Yes" />
-              <label for="yes">Yes</label>
-              <input type="radio" id="no" name="isIndonesia" value="No" />
-              <label for="no">No</label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Additional Information:</legend>
-            <div>
-              <p>What do you think about the anime?</p>
-              <input id="spiritfull" type="checkbox" name="personality" value="spiritfull" />
-              <label for="spiritfull">Spiritfull</label>
-              <input id="amazing" type="checkbox" name="personality" value="amazing" />
-              <label for="amazing">Amazing</label>
-              <input id="Sugoi" type="checkbox" name="personality" value="Sugoi" />
-              <label for="Sugoi">Sugoi</label>
-            </div>
-            <div>
-              <p>Tell us why you love The Anime!</p>
-              <textarea rows="3"></textarea>
-            </div>
-            <div>
-              <p>Upload your favorite Anime picture here:</p>
-              <input type="file" id="photo" name="myAnimePhoto" required accept="image/png, image/jpeg, image/jpg" />
-            </div>
-          </fieldset>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-    </main>
-    <script>
-      if (localStorage.getItem("darkMode") === "true") {
-        document.getElementById("checkbox-mode-hitam").checked = true;
-        document.body.classList.add("mode-hitam");
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image with Smooth Transition</title>
+  <style>
+    /* Container for the image */
+    .image-container {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
 
-      function toggleDarkMode() {
-        document.body.classList.toggle("mode-hitam");
-        localStorage.setItem("darkMode", document.getElementById("checkbox-mode-hitam").checked);
-      }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: width 0.5s ease, height 0.5s ease; /* Smooth transition for width and height */
+    }
 
-      function showSidebar() {
-        document.querySelector('.sidebar').classList.add('visible');
+    /* Media queries */
+    @media (max-width: 600px) {
+      .image-container img {
+        height: 200px; /* Adjust the height smoothly for smaller screens */
       }
+    }
+  </style>
+</head>
+<body>
 
-      function hideSidebar() {
-        document.querySelector('.sidebar').classList.remove('visible');
-      }
-    </script>
-  </body>
+  <div class="image-container">
+    <img src="https://via.placeholder.com/600x315?text=Responsive+Image" alt="Responsive Image">
+  </div>
+
+</body>
 </html>

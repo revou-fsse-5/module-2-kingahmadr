@@ -27,8 +27,11 @@
     .mode-gradient > nav {
       font-size: x-small;
     }
-    #audio-desktop-size{
-      display: none;
-    }
- 
+
+ }
+ @media only screen and (max-width: 930px) {
+  #audio-desktop-size{
+    display: none;
+  }
+
  }

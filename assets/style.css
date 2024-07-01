@@ -1,20 +1,25 @@
-@font-face {
-    font-family: Fantasy-Battles;
-    src: url(assets/fonts/Fantasy_Battles.ttf);
+  @font-face {
+    font-family: "North-Plains";
+    src: url(assets/fonts/North-Plains-Free.ttf);
   }
   
   @font-face {
-    font-family: Fantasy-Battles;
-    src: url(assets/Fantasy_Battles.ttf);
+    font-family: "North-Plains-Bold";
+    src: url(assets/fonts/North-Plains-Free.ttf);
     font-weight: bold;
   }
   
 
-  body {
+  /* body {
     font-family: 'Uncial Antiqua', 'Cinzel', serif;
     margin: 0;
+  } */
+  body{
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    margin: 0;
   }
-  
 
   /* Gradient Mode Colour*/
   .mode-gradient {
@@ -26,6 +31,7 @@
     background: linear-gradient(135deg, #8bda0d, #df9a19);
     color: rgb(0, 0, 0);
     border-bottom: 2px solid rgb(75, 7, 231);
+    height: 50px;
   }
   
   .mode-gradient > nav a {
@@ -44,7 +50,7 @@
   }
 
   .mode-gradient #audio-player-container{
-    background-color: #050505;
+    background-color: #266efc84;
 
   }
   .mode-gradient #audio-player-container p{
@@ -77,6 +83,8 @@
     display: inline-block;
     width: 36px;
     height: 22px;
+    margin-right: 10px;
+    
   }
   
   /* Hide default HTML checkbox */
@@ -112,7 +120,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196f3;
+    background-color: #21f336;
   }
   
   input:focus + .slider {
@@ -175,8 +183,16 @@
     padding-top: 48px;
     background-image: url("img/bg_image_bokuno.png");
     background-position: top center;
-    background-size: cover;
+    background-size: 100%;
+    transition-property: background-size;
+    transition-duration: 4s;
+
   }
+
+  header:hover{
+    background-size: 200%;
+  }
+  
   
   nav .circle-red {
     font-size: 8px;
@@ -337,6 +353,11 @@
       display: flex;
       align-items: center;
     }
+
+    #anime-facts > .flex-container .cover{
+     height: 200px;
+     width: fit-content;
+    }
   
     #anime-facts > .flex-container figure {
       margin-left: auto;
@@ -364,10 +385,6 @@
       min-width: 320px;
     }
   
-    iframe {
-      max-width: 480px;
-    }
-  
     #anime-photos .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -392,3 +409,46 @@
     }
   }
   
+  /* Carousel Video Style*/
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-item iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .carousel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  /* End */
