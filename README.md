@@ -48,8 +48,8 @@ Added Feature:
 
 
 ## 📔 Link to my deployment and repository
-* Deploy link: [module1-revou-kingahmadr.ahmadcloud.my.id](https://module1-revou-kingahmadr.ahmadcloud.my.id//) 
-* Repository link: [github.com/revou-fsse-5/module-1-kingahmadr.git](https://github.com/revou-fsse-5/module-1-kingahmadr.git)
+* Deploy link: [module2-assignment.ahmadcloud.my.id](https://module2-assignment.ahmadcloud.my.id/) 
+* Repository link: [github.com/revou-fsse-5/module-2-kingahmadr.git](https://github.com/revou-fsse-5/module-2-kingahmadr.git)
 <br>
 <br>
 <br>
